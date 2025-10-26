@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -16,4 +17,17 @@
       <Label layoutX="395.0" layoutY="260.0" prefHeight="43.0" prefWidth="105.0" text="Forgot Password" />
       <Button fx:id="btnLogin" layoutX="331.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnLoginOnAction" text="Button" />
    </children>
+=======
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller=""
+            prefHeight="400.0" prefWidth="600.0" >
+
+>>>>>>> 46656c293bc7e71c66f0f9c2a0bbf899ce4e169f
 </AnchorPane>
