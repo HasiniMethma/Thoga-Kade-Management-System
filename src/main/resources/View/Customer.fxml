@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+   <children>
+      <Label layoutX="296.0" layoutY="105.0" text="Customer Information" />
+      <TableView fx:id="tblCustomerinfo1" layoutX="10.0" layoutY="288.0" prefHeight="267.0" prefWidth="738.0">
+         <columns>
+            <TableColumn fx:id="colCusId1" prefWidth="74.00000250339508" text="CustomerID" />
+            <TableColumn fx:id="colTitle1" prefWidth="54.66667938232422" text="Title" />
+            <TableColumn fx:id="colName1" prefWidth="94.0" text="Name" />
+            <TableColumn fx:id="colDOB1" prefWidth="83.33332824707031" text="DOB" />
+            <TableColumn fx:id="colSalary1" prefWidth="67.3333740234375" text="Salary" />
+            <TableColumn fx:id="colAddress1" prefWidth="97.333251953125" text="Address" />
+            <TableColumn fx:id="colCity1" prefWidth="65.99996948242188" text="City" />
+            <TableColumn fx:id="colProvince1" prefWidth="79.333251953125" text="Province" />
+            <TableColumn fx:id="colPostalCode1" prefWidth="86.666748046875" text="Postal Code" />
+            <TableColumn fx:id="colAddress" prefWidth="97.333251953125" text="Address" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="223.0" layoutY="55.0" prefHeight="17.0" prefWidth="303.0" text="Thoga Kade System">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="75.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionAdd" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="247.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionUpdate" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="415.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionDelete" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="559.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionClear" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtID" layoutX="40.0" layoutY="157.0" prefHeight="25.0" prefWidth="205.0" promptText="Customer ID" />
+      <TextField fx:id="txtTitle" layoutX="267.0" layoutY="157.0" prefHeight="25.0" prefWidth="214.0" promptText="Title" />
+      <TextField fx:id="txtName" layoutX="492.0" layoutY="157.0" prefHeight="25.0" prefWidth="205.0" promptText="Name" />
+      <TextField fx:id="txtDOB" layoutX="40.0" layoutY="189.0" prefHeight="25.0" prefWidth="205.0" promptText="Date of Birth" />
+      <TextField fx:id="txtSalary" layoutX="267.0" layoutY="227.0" prefHeight="25.0" prefWidth="214.0" promptText="Salary" />
+      <TextField fx:id="txtAddress" layoutX="492.0" layoutY="189.0" prefHeight="25.0" prefWidth="205.0" promptText="Address" />
+      <TextField fx:id="txtCity" layoutX="40.0" layoutY="227.0" prefHeight="25.0" prefWidth="205.0" promptText="City" />
+      <TextField fx:id="txtProvince" layoutX="267.0" layoutY="189.0" prefHeight="25.0" prefWidth="214.0" promptText="Province" />
+      <TextField fx:id="txtPostalCode" layoutX="492.0" layoutY="227.0" prefHeight="25.0" prefWidth="205.0" promptText="Postal Code" />
+       
+   </children>
+</AnchorPane>
