@@ -86,12 +86,37 @@ public class CustomerController implements Initializable {
     @FXML
     void btnOnActionAdd(ActionEvent event) {
 
+
     }
 
     @FXML
     void btnOnActionClear(ActionEvent event) {
+        String id = txtID.getText();
+        String title = txtTitle.getText();
+        String name = txtName.getText();
+        String dob = txtDOB.getText();
+        Double salary = Double.valueOf(txtSalary.getText());
+        String address = txtAddress.getText();
+        String city = txtCity.getText();
+        String province = txtProvince.getText();
+        String postalCode = txtPostalCode.getText();
 
+        CustomerInforDTO customerInfoDTO=new CustomerInforDTO(id,title,name,dob,salary,address,city,province,postalCode);
+        customerInforDTO.add(customerInfoDTO);
+
+        tblCustomerinfo1.refresh();
+
+        txtID.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDOB.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
     }
+
 
     @FXML
     void btnOnActionDelete(ActionEvent event) {
