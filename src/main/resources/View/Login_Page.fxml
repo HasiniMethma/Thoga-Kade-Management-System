@@ -4,23 +4,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
-      <Pane layoutX="279.0" prefHeight="400.0" prefWidth="327.0">
+      <Pane layoutX="265.0" layoutY="2.0" prefHeight="400.0" prefWidth="327.0">
          <children>
-            <Label alignment="CENTER" layoutX="57.0" layoutY="24.0" prefHeight="36.0" prefWidth="204.0" text="Welcome " textFill="#e22424">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="64.0" layoutY="24.0" prefHeight="36.0" prefWidth="204.0" text="Welcome " textFill="#e80a0a">
                <font>
-                  <Font name="Gabriola" size="31.0" />
+                  <Font name="Script MT Bold" size="36.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="12.0" layoutY="71.0" prefHeight="17.0" prefWidth="303.0" text="Thoga Kade System">
+            <Label alignment="CENTER" layoutX="24.0" layoutY="71.0" prefHeight="17.0" prefWidth="303.0" text="Thoga Kade Management System">
                <font>
-                  <Font name="Arial Bold" size="24.0" />
+                  <Font name="Bodoni MT Bold" size="22.0" />
                </font>
             </Label>
             <Label layoutX="50.0" layoutY="151.0" prefHeight="27.0" prefWidth="242.0" style="-fx-background-border: red;" text="User Name :">
@@ -28,8 +29,11 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="188.0" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: white; -fx-font: white;" styleClass="font-color" />
-            <Button layoutX="50.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnOnActionLogin" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: black;" text="Login" textFill="WHITE">
+            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="188.0" opacity="0.2" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #cbd0ca;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Button layoutX="125.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnOnActionLogin" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: black;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -39,18 +43,13 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="86.0" layoutY="104.0" prefHeight="17.0" prefWidth="146.0" text="Login Form">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="txtPasswordField" layoutX="50.0" layoutY="264.0" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: white;" />
+            <PasswordField fx:id="txtPasswordField" layoutX="50.0" layoutY="262.0" opacity="0.2" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #cbd0ca;" />
          </children>
       </Pane>
-      <ImageView fitHeight="336.0" fitWidth="248.0" layoutX="18.0" layoutY="28.0">
-<!--         <image>-->
-<!--            <Image url="@../images/superMarket.jpeg" />-->
-<!--         </image>-->
+      <ImageView fitHeight="402.0" fitWidth="285.0">
+         <image>
+            <Image url="@../1.jpg" />
+         </image>
       </ImageView>
    </children>
 </AnchorPane>
