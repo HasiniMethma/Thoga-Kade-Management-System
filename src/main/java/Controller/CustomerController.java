@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -54,7 +55,7 @@ public class CustomerController implements Initializable {
     private TableColumn<?, ?> colTitle1;
 
     @FXML
-    private TableView<?> tblCustomerinfo1;
+    private TableView<CustomerInforDTO> tblCustomerinfo1;
 
     @FXML
     private TextField txtAddress;
@@ -85,21 +86,15 @@ public class CustomerController implements Initializable {
 
     @FXML
     void btnOnActionAdd(ActionEvent event) {
-
-
-    }
-
-    @FXML
-    void btnOnActionClear(ActionEvent event) {
-        String id = txtID.getText();
-        String title = txtTitle.getText();
-        String name = txtName.getText();
-        String dob = txtDOB.getText();
-        Double salary = Double.valueOf(txtSalary.getText());
-        String address = txtAddress.getText();
-        String city = txtCity.getText();
-        String province = txtProvince.getText();
-        String postalCode = txtPostalCode.getText();
+        String id=txtID.getText();
+        String title=txtTitle.getText();
+        String name=txtName.getText();
+        String dob=txtDOB.getText();
+        Double salary= Double.valueOf(txtSalary.getText());
+        String address=txtAddress.getText();
+        String city=txtCity.getText();
+        String province=txtProvince.getText();
+        String postalCode=txtPostalCode.getText();
 
         CustomerInforDTO customerInfoDTO=new CustomerInforDTO(id,title,name,dob,salary,address,city,province,postalCode);
         customerInforDTO.add(customerInfoDTO);
@@ -117,19 +112,94 @@ public class CustomerController implements Initializable {
         txtPostalCode.setText("");
     }
 
+    @FXML
+    void btnOnActionClear(ActionEvent event) {
+       txtID.setText("");
+       txtTitle.setText("");
+       txtName.setText("");
+       txtDOB.setText("");
+       txtSalary.setText("");
+       txtAddress.setText("");
+       txtCity.setText("");
+       txtProvince.setText("");
+       txtPostalCode.setText("");
+    }
+
 
     @FXML
     void btnOnActionDelete(ActionEvent event) {
+        CustomerInforDTO selectedItem=tblCustomerinfo1.getSelectionModel().getSelectedItem();
+        customerInforDTO.remove(selectedItem);
+
+        tblCustomerinfo1.refresh();
+
+        txtID.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDOB.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
 
     }
 
     @FXML
     void btnOnActionUpdate(ActionEvent event) {
+        CustomerInforDTO selectedItem=tblCustomerinfo1.getSelectionModel().getSelectedItem();
+
+        selectedItem.setId(txtID.getText());
+        selectedItem.setTitle(txtTitle.getText());
+        selectedItem.setName(txtName.getText());
+        selectedItem.setDob(txtDOB.getText());
+        selectedItem.setSalary(Double.valueOf(txtSalary.getText()));
+        selectedItem.setAddress(txtAddress.getText());
+        selectedItem.setCity(txtCity.getText());
+        selectedItem.setProvince(txtProvince.getText());
+        selectedItem.setPostalCode(txtPostalCode.getText());
+
+        tblCustomerinfo1.refresh();
+
+        txtID.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDOB.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostalCode.setText("");
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        colCusId1.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colTitle1.setCellValueFactory(new PropertyValueFactory<>("title"));
+        colName1.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colDOB1.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        colSalary1.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colCity1.setCellValueFactory(new PropertyValueFactory<>("city"));
+        colProvince1.setCellValueFactory(new PropertyValueFactory<>("province"));
+        colPostalCode1.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
 
+        tblCustomerinfo1.setItems(customerInforDTO);
+
+        //Autofill txt field
+        tblCustomerinfo1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->{
+            if(newValue != null){
+                txtID.setText(newValue.getId());
+                txtTitle.setText(newValue.getTitle());
+                txtName.setText(newValue.getName());
+                txtDOB.setText(newValue.getDob());
+                txtSalary.setText(String.valueOf(newValue.getSalary()));
+                txtAddress.setText(newValue.getAddress());
+                txtCity.setText(newValue.getCity());
+                txtProvince.setText(newValue.getProvince());
+                txtPostalCode.setText(newValue.getPostalCode());
+            }
+        });
     }
 }
