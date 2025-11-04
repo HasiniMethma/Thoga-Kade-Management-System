@@ -29,7 +29,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="188.0" opacity="0.2" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #cbd0ca;">
+            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="188.0" opacity="0.98" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #f4f1ec;">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></TextField>
@@ -43,7 +43,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <PasswordField fx:id="txtPasswordField" layoutX="50.0" layoutY="262.0" opacity="0.2" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #cbd0ca;" />
+            <PasswordField fx:id="txtPasswordField" layoutX="50.0" layoutY="262.0" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #f4f1ec;" />
          </children>
       </Pane>
       <ImageView fitHeight="402.0" fitWidth="285.0">

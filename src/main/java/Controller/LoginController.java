@@ -14,6 +14,7 @@ import java.io.IOException;
 public class LoginController {
 
     Stage stage=new Stage();
+
     @FXML
     private TextField txtUsername;
 
@@ -37,6 +38,7 @@ public class LoginController {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+            stage.setTitle("DashBoard");
             stage.show();
         }else{
             System.out.println("Sorry, Your Password is Incorrect");
@@ -51,6 +53,4 @@ public class LoginController {
             alert.showAndWait();
         }
     }
-
-
 }
