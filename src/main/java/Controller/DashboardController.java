@@ -19,6 +19,7 @@ public class DashboardController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        stage.setTitle("Customer Management");
         stage.show();
     }
 
@@ -29,17 +30,23 @@ public class DashboardController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        stage.setTitle("Employee Management");
         stage.show();
     }
 
     @FXML
     void btnItemOnAction(ActionEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Item.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Item Management");
+        stage.show();
     }
 
     @FXML
     void btnSupplierOnAction(ActionEvent event) {
 
     }
-
 }
