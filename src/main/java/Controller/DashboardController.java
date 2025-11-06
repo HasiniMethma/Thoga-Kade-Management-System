@@ -47,6 +47,12 @@ public class DashboardController {
 
     @FXML
     void btnSupplierOnAction(ActionEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Supplier.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Supplier Management");
+        stage.show();
     }
 }
