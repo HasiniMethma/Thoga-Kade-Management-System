@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="594.0" prefWidth="756.0" style="-fx-background-color: #D89756;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+<AnchorPane prefHeight="544.0" prefWidth="756.0" style="-fx-background-color: #D89756;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
    <children>
-      <Label layoutX="238.0" layoutY="62.0" text="Customer Information">
+      <Label alignment="CENTER" layoutX="230.0" layoutY="14.0" prefHeight="33.0" prefWidth="309.0" text="Customer Management">
          <font>
             <Font name="Times New Roman Bold" size="29.0" />
          </font></Label>
-      <TableView fx:id="tblCustomerinfo1" layoutX="10.0" layoutY="288.0" prefHeight="267.0" prefWidth="738.0">
+      <TableView fx:id="tblCustomerinfo1" layoutX="9.0" layoutY="241.0" prefHeight="267.0" prefWidth="738.0">
          <columns>
             <TableColumn fx:id="colCusId1" prefWidth="74.00000250339508" text="CustomerID" />
             <TableColumn fx:id="colTitle1" prefWidth="54.66667938232422" text="Title" />
@@ -29,40 +29,40 @@
             <TableColumn fx:id="colAddress" prefWidth="97.333251953125" text="Address" />
          </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="512.0" layoutY="563.0" prefHeight="17.0" prefWidth="230.0" text="Thoga Kade Management System">
+      <Label alignment="CENTER" layoutX="550.0" layoutY="520.0" prefHeight="17.0" prefWidth="197.0" text="Thoga Kade Management System">
          <font>
             <Font name="Bodoni MT Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="75.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionAdd" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Add" textFill="WHITE">
+      <Button layoutX="95.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnOnActionAdd" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Add" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="247.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionUpdate" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
+      <Button layoutX="269.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnOnActionUpdate" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="415.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionDelete" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+      <Button layoutX="433.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnOnActionDelete" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="559.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnOnActionClear" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE">
+      <Button layoutX="586.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnOnActionClear" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="txtID" layoutX="40.0" layoutY="157.0" prefHeight="25.0" prefWidth="205.0" promptText="Customer ID" />
-      <TextField fx:id="txtTitle" layoutX="267.0" layoutY="157.0" prefHeight="25.0" prefWidth="214.0" promptText="Title" />
-      <TextField fx:id="txtName" layoutX="492.0" layoutY="157.0" prefHeight="25.0" prefWidth="205.0" promptText="Name" />
-      <TextField fx:id="txtDOB" layoutX="40.0" layoutY="189.0" prefHeight="25.0" prefWidth="205.0" promptText="Date of Birth" />
-      <TextField fx:id="txtSalary" layoutX="267.0" layoutY="227.0" prefHeight="25.0" prefWidth="214.0" promptText="Salary" />
-      <TextField fx:id="txtAddress" layoutX="492.0" layoutY="189.0" prefHeight="25.0" prefWidth="205.0" promptText="Address" />
-      <TextField fx:id="txtCity" layoutX="40.0" layoutY="227.0" prefHeight="25.0" prefWidth="205.0" promptText="City" />
-      <TextField fx:id="txtProvince" layoutX="267.0" layoutY="189.0" prefHeight="25.0" prefWidth="214.0" promptText="Province" />
-      <TextField fx:id="txtPostalCode" layoutX="492.0" layoutY="227.0" prefHeight="25.0" prefWidth="205.0" promptText="Postal Code" />
+      <TextField fx:id="txtID" layoutX="51.0" layoutY="65.0" prefHeight="25.0" prefWidth="205.0" promptText="Customer ID" />
+      <TextField fx:id="txtTitle" layoutX="278.0" layoutY="65.0" prefHeight="25.0" prefWidth="214.0" promptText="Title" />
+      <TextField fx:id="txtName" layoutX="503.0" layoutY="65.0" prefHeight="25.0" prefWidth="205.0" promptText="Name" />
+      <TextField fx:id="txtDOB" layoutX="51.0" layoutY="97.0" prefHeight="25.0" prefWidth="205.0" promptText="Date of Birth" />
+      <TextField fx:id="txtSalary" layoutX="278.0" layoutY="135.0" prefHeight="25.0" prefWidth="214.0" promptText="Salary" />
+      <TextField fx:id="txtAddress" layoutX="503.0" layoutY="97.0" prefHeight="25.0" prefWidth="205.0" promptText="Address" />
+      <TextField fx:id="txtCity" layoutX="51.0" layoutY="135.0" prefHeight="25.0" prefWidth="205.0" promptText="City" />
+      <TextField fx:id="txtProvince" layoutX="278.0" layoutY="97.0" prefHeight="25.0" prefWidth="214.0" promptText="Province" />
+      <TextField fx:id="txtPostalCode" layoutX="503.0" layoutY="135.0" prefHeight="25.0" prefWidth="205.0" promptText="Postal Code" />
        
    </children>
    <cursor>
